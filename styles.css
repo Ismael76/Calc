@@ -1,0 +1,91 @@
+/* We can use the universal selector to set styles to all elements! */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Bebas Neue", cursive;
+}
+
+@keyframes color {
+  0% {
+    background: #33cccc;
+  }
+  20% {
+    background: #33cc36;
+  }
+  40% {
+    background: #b8cc33;
+  }
+  60% {
+    background: #fcca00;
+  }
+  80% {
+    background: #33cc36;
+  }
+  100% {
+    background: #33cccc;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #33cccc;
+  animation: color 9s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Using minmax function to set the size of the screen row, by doing this it allows the screen to grow by setting the row size to either 100px which is the min size or
+if the screen needs more space it will trigger the max size which is set to auto basically it adds a new row if not everything fits on the row with the min size 100px*/
+.calculator-grid {
+  display: grid;
+  grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+  grid-template-columns: repeat(4, 75px);
+}
+
+.output-screen {
+  /* 1 / -1 spans entire column length of grid */
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.616);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 3rem;
+}
+
+.previous-operand {
+  font-size: 2rem;
+  color: rgba(255, 247, 247, 0.863);
+}
+
+button {
+  font-size: 3.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgb(119, 118, 118);
+}
+
+button:hover {
+  background-color: rgb(126, 126, 126);
+}
+
+.span-two {
+  grid-column: 1 / span 2;
+}
+
+.equal {
+  grid-column: 3 / 5;
+}

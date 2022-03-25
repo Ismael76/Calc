@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Calculator</title>
   </head>
   <body>
-    <div class="container"></div>
+    <!-- We are using date- attributes to select the elements in JS and not using classes to seperate what is being called in our CSS file compared to our JS file. -->
+    <div class="calculator-grid">
+      <div class="output-screen">
+        <div class="previous-operand" data-previous-operand></div>
+        <div class="current-operand" data-current-operand></div>
+      </div>
+      <button class="btn span-two" data-all-clear>AC</button>
+      <button class="btn" data-delete>DEL</button>
+      <button class="btn" data-operation>÷</button>
+      <button class="btn" data-number>1</button>
+      <button class="btn" data-number>2</button>
+      <button class="btn" data-number>3</button>
+      <button class="btn" data-operation>*</button>
+      <button class="btn" data-number>4</button>
+      <button class="btn" data-number>5</button>
+      <button class="btn" data-number>6</button>
+      <button class="btn" data-operation>-</button>
+      <button class="btn" data-number>7</button>
+      <button class="btn" data-number>8</button>
+      <button class="btn" data-number>9</button>
+      <button class="btn" data-operation>+</button>
+      <button class="btn" data-number>.</button>
+      <button class="btn" data-number>0</button>
+      <button class="btn equal" data-equals>=</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
