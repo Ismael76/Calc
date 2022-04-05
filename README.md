@@ -1,4 +1,4 @@
 # Calc
 JS Calculator
 
-Link: https://venerable-gnome-3d4c2b.netlify.app/
+Link: https://ismael-calc.netlify.app/
